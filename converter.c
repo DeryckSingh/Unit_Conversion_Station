@@ -126,7 +126,7 @@ void convert_weight(void) {
     }
 }
 
-void convert_weight(void) {
+void convert_speed(void) {
     int direction;
     double value, equals;
 
