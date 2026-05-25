@@ -69,3 +69,87 @@ void convert_temperature(void) {
     }
 
 }
+
+void convert_distance(void) {
+    int direction;
+    double value, equals;
+
+    printf("--- Distance ---\n");
+    printf("1. Miles to Kilometers\n");
+    printf("2. Kilometers to Miles\n");
+    
+    direction = get_validated_int(1, 2,
+        "Enter direction (1-2): ",
+        "Invalid. Try again.");
+
+    switch (direction) {
+        case 1:
+            printf("\nEnter distance in miles: ");
+            fscanf(stdin, "%lf", &value);
+            equals = value * MI_TO_KM;
+            printf("%.2f miles = %.2f km\n", value, equals);
+            break;
+        case 2:
+            printf("\nEnter distance in kilometers: ");
+            fscanf(stdin, "%lf", &value);
+            equals = value / MI_TO_KM;
+            printf("%.2f km = %.2f miles\n", value, equals);
+            break;
+    }
+}
+
+void convert_weight(void) {
+    int direction;
+    double value, equals;
+
+    printf("--- Weight ---\n");
+    printf("1. Pounds to Kilograms\n");
+    printf("2. Kilograms to Pounds\n");
+    
+    direction = get_validated_int(1, 2,
+        "Enter direction (1-2): ",
+        "Invalid. Try again.");
+
+    switch (direction) {
+        case 1:
+            printf("\nEnter weight in pounds: ");
+            fscanf(stdin, "%lf", &value);
+            equals = value * LB_TO_KG;
+            printf("%.2f lbs = %.2f kg\n", value, equals);
+            break;
+        case 2:
+            printf("\nEnter distance in kilometers: ");
+            fscanf(stdin, "%lf", &value);
+            equals = value / LB_TO_KG;
+            printf("%.2f kg = %.2f lbs\n", value, equals);
+            break;
+    }
+}
+
+void convert_weight(void) {
+    int direction;
+    double value, equals;
+
+    printf("--- Speed ---\n");
+    printf("1. MPH to KPH\n");
+    printf("2. KPH to MPH\n");
+    
+    direction = get_validated_int(1, 2,
+        "Enter direction (1-2): ",
+        "Invalid. Try again.");
+
+    switch (direction) {
+        case 1:
+            printf("\nEnter speed in mph: ");
+            fscanf(stdin, "%lf", &value);
+            equals = value * MI_TO_KM;
+            printf("%.2f lbs = %.2f kg\n", value, equals);
+            break;
+        case 2:
+            printf("\nEnter distance in kilometers: ");
+            fscanf(stdin, "%lf", &value);
+            equals = value / MI_TO_KM;
+            printf("%.2f kg = %.2f lbs\n", value, equals);
+            break;
+    }
+}
