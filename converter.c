@@ -63,7 +63,7 @@ void convert_temperature(void) {
         case 2:
             printf("\nEnter temperature in Fahrenheit: ");
             fscanf(stdin, "%lf", &value);
-            equals = (value * C_TO_F_SCALE) * (1.0 / C_TO_F_OFFSET);
+            equals = (value - C_TO_F_SCALE) * (1.0 / C_TO_F_OFFSET);
             printf("%.2f\xb0 = %.2f\xb0\n", value, equals);
             break;
     }
