@@ -15,12 +15,20 @@ int main(void) {
     do {
         printf("Enter your initial: ");
         fscanf(stdin, " %c", &initial);
-        if (!((initial >= 'A' && initial <= 'Z')|| (initial >= 'a' && initial <= 'z')))
+        if (!((initial >= 'A' && initial <= 'Z') || (initial >= 'a' && initial <= 'z')))
             printf("Invalid input. Try again.\n");
 
     } while (!((initial >= 'A' && initial <= 'Z')|| (initial >= 'a' && initial <= 'z')));
 
+    double decimal;
+    do {
+        printf("Enter a positive decimal: ");
+        fscanf(stdin, "%lf", &decimal);
+        if (decimal <= 0.0)
+            printf("Invalid Input. Try again. \n");
+    } while (decimal <= 0.0);
 
+    printf("Hello, %c. You are %d years old. Your number: %.2lf\n", initial, age, decimal);
 
     return 0;
 
